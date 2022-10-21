@@ -1,0 +1,80 @@
+@import "./layout";
+@import "./components";
+@import "./base";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $t-bg-grey;
+  width: 414px;
+  scroll-behavior: smooth;
+  overflow: hidden;
+  position: relative;
+
+  .container {
+      overflow: auto;
+  }
+}
+
+.section {
+  @include page;
+  height: 100vh;
+}
+
+.one,
+.ten {
+  @include bg-image;
+  background-image: url("../assets/landingImage.png");
+}
+
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine,
+.ten,
+.costs {
+  display: block;
+  position: relative;
+  z-index: 1;
+
+  img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .container {
+    @include base-container;
+  }
+}
+
+.section-titles {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 208px;
+  color: #ffffff;
+  font-family: $outfit;
+  font-weight: 400;
+
+  h1 {
+    margin: 0;
+    font-size: 30;
+  }
+
+  h2 {
+    margin-top: 130px;
+    font-size: 25px;
+  }
+}
+
+
+.container::-webkit-scrollbar {
+  display: none;
+}

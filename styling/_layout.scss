@@ -1,0 +1,595 @@
+@import "./base";
+
+.landing-content {
+  text-align: center;
+
+  h1 {
+    color: #ffffff;
+    font-family: $outfit;
+    font-weight: 300;
+    font-size: 70px;
+    margin: 0;
+    padding-top: 130px;
+  }
+
+  h3 {
+    color: white;
+    font-family: $outfit;
+    font-weight: 300;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-top: -7px;
+  }
+
+  button {
+    margin-top: 220px;
+    padding: 6px 30px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: $nunito;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: none;
+    color: $t-blue;
+  }
+}
+
+.section {
+  .container-box {
+    width: 85%;
+    min-height: 40px;
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 18px;
+    box-shadow: 3px 8px 10px 1px lightgray;
+    padding-bottom: 20px;
+
+    .progress {
+      width: 80%;
+      height: 20px;
+      margin: auto;
+      padding-top: 18px;
+
+      .progress-text {
+        display: flex;
+        gap: 183px;
+
+        h5 {
+          margin-top: 0;
+          margin-left: 0;
+          margin-bottom: 0;
+          font-family: $nunito;
+          font-weight: 300;
+
+          span {
+            margin-left: auto;
+            margin-right: 0;
+            font-weight: bold;
+            color: $t-blue;
+          }
+        }
+      }
+
+      // completed bar = 68%
+      .progress-bar {
+        span.bar-grey {
+          width: 100%;
+          height: 4px;
+          background-color: #e3e3e3;
+          display: block;
+          border-radius: 5px;
+        }
+
+        span.bar-blue-two {
+          width: 15%;
+          height: 4px;
+          background-color: $t-blue;
+          position: absolute;
+          z-index: 20;
+          display: block;
+          border-radius: 5px;
+        }
+
+        span.bar-blue-three {
+          width: 30%;
+          height: 4px;
+          background-color: $t-blue;
+          position: absolute;
+          z-index: 20;
+          display: block;
+          border-radius: 5px;
+        }
+
+        span.bar-blue-four {
+          width: 45%;
+          height: 4px;
+          background-color: $t-blue;
+          position: absolute;
+          z-index: 20;
+          display: block;
+          border-radius: 5px;
+        }
+
+        span.bar-blue-five {
+          width: 55%;
+          height: 4px;
+          background-color: $t-blue;
+          position: absolute;
+          z-index: 20;
+          display: block;
+          border-radius: 5px;
+        }
+
+        span.bar-blue-six {
+          width: 65%;
+          height: 4px;
+          background-color: $t-blue;
+          position: absolute;
+          z-index: 20;
+          display: block;
+          border-radius: 5px;
+        }
+
+        span.bar-blue-seven {
+          width: 68%;
+          height: 4px;
+          background-color: $t-blue;
+          position: absolute;
+          z-index: 20;
+          display: block;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+
+  .buttons {
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 60px;
+
+    .cancel,
+    .continue {
+      border: none;
+      border-radius: 5px;
+    }
+
+    .cancel {
+      padding: 6px 10px;
+      font-size: 28px;
+      background-color: #d3d3d3;
+      color: #848484;
+      align-items: center;
+    }
+
+    .continue {
+      padding: 8px 28px;
+      font-size: 20px;
+      background-color: $t-blue;
+      color: #ffffff;
+      font-weight: 500;
+      font-family: $nunito;
+      text-transform: uppercase;
+    }
+  }
+
+  .box-heading {
+    text-align: center;
+    color: #535353;
+    font-family: $nunito;
+    font-weight: 200;
+    font-size: 18px;
+    padding-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  .box-description {
+    text-align: center;
+    color: #535353;
+    font-family: $outfit;
+    font-weight: 400;
+    font-size: 11px;
+    padding-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .traveller-count {
+    background-color: $t-grey;
+    width: 65%;
+    height: 50px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    button {
+      border: none;
+      font-size: 14px;
+      color: $t-blue;
+    }
+
+    .traveller-data {
+      font-family: $nunito;
+      font-weight: 200;
+      font-size: 30px;
+      width: 20px;
+      border: none;
+      background-color: transparent;
+    }
+  }
+}
+
+// Calendar Styling
+
+.dates {
+  display: block;
+  margin: auto;
+
+  .date-block {
+    width: 80%;
+    margin: auto;
+  }
+
+  .nights-block {
+    width: 80%;
+    margin: auto;
+  }
+
+.calendar, .nights {
+  background-color: $t-grey;
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    text-align: center;
+    font-family: $nunito;
+    color: $t-blue;
+    font-weight: 600;
+}
+
+.calendar {
+  input {
+    background-color: transparent;
+    border: none;
+    font-family: $nunito;
+    font-size: 18px;
+    font-weight: 400;
+    height: 50px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  input::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+}
+
+.nights {
+
+  input {
+    background-color: transparent;
+    border: none;
+    font-family: $nunito;
+    font-size: 22px;
+    font-weight: 400;
+    height: 50px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+.type-acc {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  padding-bottom: 10px;
+
+  div {
+    width: 75%;
+    height: 50px;
+    background-color: $t-grey;
+    border-radius: 12px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 5px;
+    padding-left: 15px;
+
+    font-family: $outfit;
+
+    span {
+      font-size: 30px;
+      color: $t-blue;
+    }
+
+    .check {
+      opacity: 0;
+      color: $t-green;
+    }
+
+    .check-valid {
+      opacity: 1;
+      color: $t-green;
+    }
+
+    h3 {
+      font-weight: 400;
+      font-size: 22px;
+      color: $t-blue;
+    }
+
+    h4 {
+      font-weight: 300;
+      font-size: 14px;
+      color: $t-dk-grey;
+      margin-left: auto;
+      margin-right: 0px;
+    }
+  }
+}
+
+.accommodation-type {
+  position: relative;
+  display: block;
+  padding: 3%;
+  background-color: $t-grey;
+  border-radius: 18px;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 15px;
+
+  .cover {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+  }
+
+  h5 {
+    font-family: $nunito;
+    color: $t-dk-grey;
+    font-size: 10px;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    font-family: $outfit;
+    color: $t-blue;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 1px;
+    margin-bottom: 0;
+  }
+
+  h4 {
+    font-family: $nunito;
+    color: $t-dk-grey;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  p.overview {
+    font-family: $nunito;
+    color: $t-dk-grey;
+    font-size: 12px;
+  }
+}
+
+.meals {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  padding-bottom: 10px;
+
+  div {
+    width: 75%;
+    height: 30px;
+    background-color: $t-grey;
+    border-radius: 12px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 5px;
+    padding-left: 15px;
+
+    font-family: $nunito;
+
+    span {
+      font-size: 30px;
+      color: #dbdbdb;
+    }
+
+    h3 {
+      font-weight: 400;
+      font-size: 12px;
+      color: $t-blue;
+    }
+
+    h4 {
+      font-weight: 300;
+      font-size: 12px;
+      color: $t-dk-grey;
+      margin-left: auto;
+      margin-right: 11px;
+    }
+  }
+}
+
+// Form
+
+form {
+  padding: 30px;
+  display: flex;
+  width: 80%;
+  border-radius: 10px;
+  flex-direction: column;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .save-details {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    label {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .name,
+  .phone,
+  .email {
+    background-color: $t-grey;
+    border: none;
+    height: 25px;
+    border-radius: 15px;
+    color: $t-dk-grey;
+    padding-left: 10px;
+    font-family: $nunito;
+  }
+
+  input:focus {
+    outline: 1px solid $t-blue;
+  }
+
+  label {
+    color: $t-dk-grey;
+    padding-bottom: 7px;
+    font-family: $outfit;
+  }
+}
+
+.verify {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  margin-left: auto;
+  right: 12px;
+  top: 30px;
+}
+
+.end-content {
+  text-align: center;
+
+  h1 {
+    color: #ffffff;
+    font-family: $outfit;
+    font-weight: 300;
+    font-size: 70px;
+    margin: 0;
+    padding-top: 130px;
+  }
+
+  h3 {
+    color: white;
+    font-family: $outfit;
+    font-weight: 300;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-top: -7px;
+  }
+
+  h4 {
+    color: white;
+    font-family: $outfit;
+    font-weight: 500;
+    font-size: 30px;
+    width: 80%;
+    text-transform: uppercase;
+    margin: auto;
+    margin-top: 50px;
+  }
+
+  button {
+    margin-top: 100px;
+    padding: 6px 30px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: $nunito;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: none;
+    color: $t-blue;
+  }
+}
+
+.traveller-costs {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-row-gap: 15px;
+  font-family: $outfit;
+  padding-bottom: 12px;
+
+  .block {
+    border-bottom: 1px solid $t-blue;
+    padding-bottom: 4px;
+  }
+
+  .data {
+    font-family: $nunito;
+    font-weight: 300;
+  }
+}
+
+.info-confirm {
+width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-row-gap: 15px;
+  font-family: $outfit;
+  padding-bottom: 12px;
+
+  .block {
+    border-bottom: 1px solid $t-blue;
+    padding-bottom: 4px;
+  }
+
+  .data {
+    font-family: $nunito;
+    font-weight: 300;
+    text-align: right;
+  }
+
+}
+
