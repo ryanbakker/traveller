@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/3301688d57.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Traveller</title>
+    <link rel="stylesheet" href="./styling/main.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="landing" class="section one">
+      <div class="landing-content">
+        <h1>Traveller</h1>
+        <h3>Personal Travel Agent</h3>
+        <a href="#travellers"><button>Let's Start</button></a>
+      </div>
+    </div>
+
+    <div id="travellers" class="section two">
+      <img
+        src="./assets/datesImage.png"
+        alt="Travellers and Dates Background"
+      />
+      <div class="section-titles">
+        <h1 class="section-logo">Traveller</h1>
+        <h2 class="section-title">Travellers & Dates</h2>
+      </div>
+      <div class="container">
+        <div class="container-box">
+          <div class="progress">
+            <div class="progress-text">
+              <h5>PROGRESS</h5>
+              <h5><span>20%</span></h5>
+            </div>
+            <div class="progress-bar">
+              <span class="bar-blue-two"></span>
+              <span class="bar-grey"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-box">
+          <h4 class="box-heading">Number of Travellers (max 4)</h4>
+          <div class="traveller-count">
+            <button class="minus">
+              <i class="fas fa-minus"></i>
+            </button>
+
+            <input type="text" value="0" class="traveller-data" />
+
+            <button class="plus">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="container-box">
+          <div class="dates">
+            <div class="date-block">
+              <h4 class="box-heading">Arrival</h4>
+              <div class="calendar">
+                <input
+                  type="date"
+                  id="arrival"
+                  name="arrival"
+                  class="arrival-date"
+                />
+              </div>
+            </div>
+
+            <div class="nights-block">
+              <h4 class="box-heading">How Many Nights?</h4>
+              <div class="nights">
+                <input
+                  type="text"
+                  id="nights"
+                  name="nights"
+                  value="0"
+                  class="nights-staying"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <a href="#landing"
+            ><button class="cancel"><i class="far fa-times-circle"></i></button
+          ></a>
+          <a href="#type" onclick="arrivalData()"
+            ><button class="continue">Continue</button></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div id="type" class="section three">
+      <img
+        src="./assets/accommodationImage.png"
+        alt="Travellers and Dates Background"
+      />
+      <div class="section-titles">
+        <h1 class="section-logo">Traveller</h1>
+        <h2 class="section-title">Accommodation Type</h2>
+      </div>
+      <div class="container">
+        <div class="container-box">
+          <div class="progress">
+            <div class="progress-text">
+              <h5>PROGRESS</h5>
+              <h5><span>40%</span></h5>
+            </div>
+            <div class="progress-bar">
+              <span class="bar-blue-three"></span>
+              <span class="bar-grey"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-box">
+          <div class="box-heading">Please Choose One</div>
+          <div class="type-acc">
+            <div class="type-hostel" onclick="changeHostel()">
+              <span class="material-icons check hostel-check">
+                check_circle
+              </span>
+              <div class="hostel">
+                <span class="material-icons"> holiday_village </span>
+                <h3>Hostel</h3>
+                <h4>$30 per night</h4>
+              </div>
+            </div>
+            <div class="type-house" onclick="changeHouse()">
+              <span class="material-icons check house-check">
+                check_circle
+              </span>
+              <div class="house">
+                <span class="material-icons"> home </span>
+                <h3>House</h3>
+                <h4>$240 per night</h4>
+              </div>
+            </div>
+            <div class="type-hotel" onclick="changeHotel()">
+              <span class="material-icons check hotel-check">
+                check_circle
+              </span>
+              <div class="hotel">
+                <span class="material-icons"> apartment </span>
+                <h3>Hotel</h3>
+                <h4>$157 per night</h4>
+              </div>
+            </div>
+            <div class="type-motel" onclick="changeMotel()">
+              <span class="material-icons check motel-check">
+                check_circle
+              </span>
+              <div class="motel">
+                <span class="material-icons"> maps_home_work </span>
+                <h3>Motel</h3>
+                <h4>$90 per night</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <a href="#landing"
+            ><button class="cancel"><i class="far fa-times-circle"></i></button
+          ></a>
+          <a href="#house" class="direct"
+            ><button class="continue">Continue</button></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div id="hostel" class="section four">
+      <img
+        src="./assets/accommodationSelectImage.png"
+        alt="Travellers and Dates Background"
+      />
+      <div class="section-titles">
+        <h1 class="section-logo">Traveller</h1>
+        <h2 class="section-title">Accommodation Type</h2>
+      </div>
+
+      <div class="container">
+        <div class="container-box">
+          <div class="progress">
+            <div class="progress-text">
+              <h5>PROGRESS</h5>
+              <h5><span>60%</span></h5>
+            </div>
+            <div class="progress-bar">
+              <span class="bar-blue-four"></span>
+              <span class="bar-grey"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-box">
+          <div class="box-heading">Hostels</div>
+
+          <div class="accommodation-type" onclick="selectAnchorLodge()">
+            <img src="./assets/anchorLodge.jpeg" alt="" class="cover" />
+            <h5>Whitianga, New Zealand</h5>
+            <h3>Anchor Lodge Backpackers</h3>
+            <h4>4 Stars</h4>
+            <p class="overview">
+              Anchor Lodge offers dorm and private rooms. With a full kitchen
+              and lounge bar, an outdoor heated swimming pool and spa, and
+              dedicated outdoor area with a BBQ. Situated on Wharf Road
+              Whitianga, it’s a short walk away from the stunning whitianga town
+              centre and waterfront.
+            </p>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <a href="#landing"
+            ><button class="cancel"><i class="far fa-times-circle"></i></button
+          ></a>
+          <a href="#meals"><button class="continue">Continue</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div id="house" class="section five">
+      <img
+        src="./assets/accommodationSelectImage.png"
+        alt="Travellers and Dates Background"
+      />
+      <div class="section-titles">
+        <h1 class="section-logo">Traveller</h1>
+        <h2 class="section-title">Accommodation Type</h2>
+      </div>
+
+      <div class="container">
+        <div class="container-box">
+          <div class="progress">
+            <div class="progress-text">
+              <h5>PROGRESS</h5>
+              <h5><span>60%</span></h5>
+            </div>
+            <div class="progress-bar">
+              <span class="bar-blue-four"></span>
+              <span class="bar-grey"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-box">
+          <div class="box-heading">Houses</div>
+
+          <div class="accommodation-type" onclick="selectBlueHaven()">
+            <img src="./assets/blueHaven.jpg" alt="" class="cover" />
+            <h5>Colville, New Zealand</h5>
+            <h3>Blue Haven House</h3>
+            <h4>5 Stars</h4>
+            <p class="overview">
+              Nestled amongst native bush on coromandel hills, with stunning
+              views of waitete bay. The cozy cabin is perfect for couples
+              wanting a relaxing weekend away. A short walk/drive from a safe,
+              secluded beach.
+            </p>
+          </div>
+          <div class="accommodation-type" onclick="selectKotareCottage()">
+            <img src="./assets/kotare.png" alt="" class="cover" />
+            <h5>Coromandel Town, New Zealand</h5>
+            <h3>Kotare Coastal Cottage</h3>
+            <h4>4 Stars</h4>
+            <p class="overview">
+              A 15km drive north of Coromandel Town. The cottage is surrounded
+              by some of the best landscapes New Zealand has to offer. A perfect
+              quiet area for people wanting a getaway from the hustle and
+              bustle.
+            </p>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <a href="#landing"
+            ><button class="cancel"><i class="far fa-times-circle"></i></button
+          ></a>
+          <a href="#meals"><button class="continue">Continue</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div id="hotel" class="section six">
+      <img
+        src="./assets/accommodationSelectImage.png"
+        alt="Travellers and Dates Background"
+      />
+      <div class="section-titles">
+        <h1 class="section-logo">Traveller</h1>
+        <h2 class="section-title">Accommodation Type</h2>
+      </div>
+
+      <div class="container">
+        <div class="container-box">
+          <div class="progress">
+            <div class="progress-text">
+              <h5>PROGRESS</h5>
+              <h5><span>60%</span></h5>
+            </div>
+            <div class="progress-bar">
+              <span class="bar-blue-four"></span>
+              <span class="bar-grey"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-box">
+          <div class="box-heading">Hotels</div>
+
+          <div class="accommodation-type" onclick="selectSoverignPier()">
+            <img src="./assets/soverign.jpeg" alt="" class="cover" />
+            <h5>Whitianga, New Zealand</h5>
+            <h3>Sovereign Pier</h3>
+            <h4>5 Stars</h4>
+            <p class="overview">
+              Our top pick for accommodation in the Coromandel. Located in
+              Whitianga, it’s a quick drive or walk to the local restaurants.
+              Included is full access to the grounds facilities including a spa,
+              pool, gym and tennis court. If you’re heading to the coromandel,
+              why not stay in a 5 star luxury waterfront apartment.
+            </p>
+          </div>
+          <div class="accommodation-type" onclick="selectBeachsideResort()">
+            <img src="./assets/beachside.png" alt="" class="cover" />
+            <h5>Whitianga, New Zealand</h5>
+            <h3>Beachside Resort</h3>
+            <h4>4 Stars</h4>
+            <p class="overview">
+              Bright, spacious and casual apartments near the stunning whitianga
+              beaches. Offering access to a tennis court and heated outdoor
+              pool.
+            </p>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <a href="#landing"
+            ><button class="cancel"><i class="far fa-times-circle"></i></button
+          ></a>
+          <a href="#meals"><button class="continue">Continue</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div id="motel" class="section seven">
+      <img
+        src="./assets/accommodationSelectImage.png"
+        alt="Travellers and Dates Background"
+      />
+      <div class="section-titles">
+        <h1 class="section-logo">Traveller</h1>
+        <h2 class="section-title">Accommodation Type</h2>
+      </div>
+
+      <div class="container">
+        <div class="container-box">
+          <div class="progress">
+            <div class="progress-text">
+              <h5>PROGRESS</h5>
+              <h5><span>60%</span></h5>
+            </div>
+            <div class="progress-bar">
+              <span class="bar-blue-four"></span>
+              <span class="bar-grey"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-box">
+          <div class="box-heading">Motels</div>
+
+          <div class="accommodation-type" onclick="selectHaheiResort()">
+            <img src="./assets/hahei.jpeg" alt="" class="cover" />
+            <h5>Hahei, New Zealand</h5>
+            <h3>Hahei Beach Resort</h3>
+            <h4>4 Stars</h4>
+            <p class="overview">
+              Amazing location with Hahei beach less than a minute away. The
+              resort offers self-contained accommodation and free parking. Each
+              unit includes cooking facilities, a patio or balcony, and kids can
+              have fun on the playground.
+            </p>
+          </div>
+          <div class="accommodation-type" onclick="selectBeachsideResort()">
+            <img src="./assets/beachside.png" alt="" class="cover" />
+            <h5>Whitianga, New Zealand</h5>
+            <h3>Beachside Resort</h3>
+            <h4>4 Stars</h4>
+            <p class="overview">
+              Bright, spacious and casual apartments near the stunning whitianga
+              beaches. Offering access to a tennis court and heated outdoor
+              pool.
+            </p>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <a href="#landing"
+            ><button class="cancel"><i class="far fa-times-circle"></i></button
+          ></a>
+          <a href="#meals"><button class="continue">Continue</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div id="meals" class="section eight">
+      <img
+        src="./assets/datesImage.png"
+        alt="Travellers and Dates Background"
+      />
+      <div class="section-titles">
+        <h1 class="section-logo">Traveller</h1>
+        <h2 class="section-title">Meal Options</h2>
+      </div>
+      <div class="container">
+        <div class="container-box">
+          <div class="progress">
+            <div class="progress-text">
+              <h5>PROGRESS</h5>
+              <h5><span>80%</span></h5>
+            </div>
+            <div class="progress-bar">
+              <span class="bar-blue-five"></span>
+              <span class="bar-grey"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-box">
+          <div class="box-heading">Available Options</div>
+          <div class="box-description">
+            MENU items subject to change.
+            <br />
+            Please call ahead for any allergy information.
+          </div>
+          <div class="meals">
+            <div class="meal-opt-one" onclick="englishBreakfastSelected()">
+              <h3>Full English Breakfast</h3>
+              <h4>$19pp</h4>
+              <span class="material-icons"> check_circle </span>
+            </div>
+            <div class="meal-opt-two" onclick="lunchMenuSelected()">
+              <h3>Lunch Menu Items</h3>
+              <h4>$22pp</h4>
+              <span class="material-icons"> check_circle </span>
+            </div>
+            <div class="meal-opt-three" onclick="wineLunchSelected()">
+              <h3>Wine and Lunch for Two</h3>
+              <h4>$50</h4>
+              <span class="material-icons"> check_circle </span>
+            </div>
+            <div class="meal-opt-four" onclick="inclusiveDinnerSelected()">
+              <h3>All Inclusive Dinner</h3>
+              <h4>$26pp</h4>
+              <span class="material-icons"> check_circle </span>
+            </div>
+            <div class="meal-opt-five" onclick="setCourseSelected()">
+              <h3>Dinner (set menu / three course)</h3>
+              <h4>$65pp</h4>
+              <span class="material-icons"> check_circle </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <a href="#landing"
+            ><button class="cancel"><i class="far fa-times-circle"></i></button
+          ></a>
+          <a href="#form"
+            ><button class="continue" onclick="mealSelectionTotal()">
+              Continue
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div id="form" class="section nine">
+      <img
+        src="./assets/personalImage.png"
+        alt="Travellers and Dates Background"
+      />
+      <div class="section-titles">
+        <h1 class="section-logo">Traveller</h1>
+        <h2 class="section-title">Personal Information</h2>
+      </div>
+      <div class="container">
+        <div class="container-box">
+          <div class="progress">
+            <div class="progress-text">
+              <h5>PROGRESS</h5>
+              <h5><span>95%</span></h5>
+            </div>
+            <div class="progress-bar">
+              <span class="bar-blue-six"></span>
+              <span class="bar-grey"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-box">
+          <div class="box-heading">Please Fill Out</div>
+          <form autocomplete="off" action="">
+            <div class="row">
+              <label for="name">Full name</label>
+              <input type="text" name="name" class="name" placeholder="" />
+              <span class="verify empty"> </span>
+              <span class="verify correct"> </span>
+              <span class="verify incorrect"> </span>
+            </div>
+            <div class="row">
+              <label for="phone">Phone</label>
+              <input type="text" name="phone" class="phone" placeholder="" />
+              <span class="message"></span>
+            </div>
+            <div class="row">
+              <label for="email">Email</label>
+              <input type="text" name="email" class="email" placeholder="" />
+              <span class="message"></span>
+            </div>
+          </form>
+        </div>
+
+        <div class="buttons">
+          <a href="#landing"
+            ><button class="cancel"><i class="far fa-times-circle"></i></button
+          ></a>
+          <a href="#cost-grid" onclick="displayData()"
+            ><button class="continue">Continue</button></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div id="cost-grid" class="section costs">
+      <img
+        src="./assets/datesImage.png"
+        alt="Travellers and Dates Background"
+      />
+      <div class="section-titles">
+        <h1 class="section-logo">Traveller</h1>
+        <h2 class="section-title">Costs</h2>
+      </div>
+      <div class="container">
+        <div class="container-box">
+          <div class="progress">
+            <div class="progress-text">
+              <h5>PROGRESS</h5>
+              <h5><span>100%</span></h5>
+            </div>
+            <div class="progress-bar">
+              <span class="bar-blue-seven"></span>
+              <span class="bar-grey"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-box">
+          <div class="box-heading">Total Costs</div>
+          <div class="traveller-costs">
+            <div class="block grid-heading">Accommodation</div>
+            <div class="block data">
+              $ <span class="selected-accommodation-cost"></span>
+            </div>
+            <div class="block grid-heading">Selected Meals</div>
+            <div class="block data">
+              $ <span class="selected-meal-costs"></span>
+            </div>
+            <div class="block grid-heading">Total Cost</div>
+            <div class="block data">$ <span class="total-cost"></span></div>
+          </div>
+          <div class="box-heading">Personal Info</div>
+          <div class="info-confirm">
+            <div class="block grid-heading">Name</div>
+            <div class="block data"><span class="users-name"></span></div>
+            <div class="block grid-heading">Phone</div>
+            <div class="block data"><span class="users-phone"></span></div>
+            <div class="block grid-heading">Email</div>
+            <div class="block data"><span class="users-email"></span></div>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <a href="#landing"
+            ><button class="cancel"><i class="far fa-times-circle"></i></button
+          ></a>
+          <a href="#ending" onclick="userInfo()"
+            ><button class="continue">Continue</button></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div id="ending" class="section ten">
+      <div class="end-content">
+        <h1>Traveller</h1>
+        <h3>Personal Travel Agent</h3>
+        <h4>Thank you for booking with us <span class="users-name"></span></h4>
+        <a href="#travellers"><button>Make Another Booking</button></a>
+      </div>
+    </div>
+
+    <script src="./js/section_two.js"></script>
+    <script src="./js/section_three.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
